@@ -26,10 +26,10 @@ class GalleryAdapter(var onItemClick: ((Uri) -> Unit)? = null): RecyclerView.Ada
                 onItemClick?.invoke(imageList[adapterPosition])
                 if (!binding.galochka.isVisible){
                     mainIt.alpha = 0.5f
-                    binding.mainOfItem.setBackgroundResource(R.drawable.bg_photo)
+                    binding.borderView.isVisible = true
                     binding.galochka.isVisible = true
                 } else{
-                    binding.mainOfItem.setBackgroundResource(R.drawable.bg_photo2)
+                    binding.borderView.isVisible = false
                     mainIt.alpha = 1.0f
                     binding.galochka.isVisible = false
                 }
